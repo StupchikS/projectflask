@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{{ super() }}
+{% for cat, msg in get_flashed_messages(True) %}
+<div class="flash{{cat}}">{{msg}}</div>
+{% endfor %}
+
+<form action="{{ url_for('add_auto') }}" method="post"
+      class="form-add">
+    <p><label>Марка автомобиля</label><input type="text" name="marka" required></p>
+    <p><label>Модель автомобиля</label><input type="text" name="model" required></p>
+    <p><label>Описание автомобиля</label></p>
+    <p><textarea class="add_info" name="information" required></textarea></p>
+    <p><label>Год выпуска автомобиля <input type="text" name="year" required></label></p>
+    <p><label>Цена автомобиля <input type="text" name="price" required></label></p>
+    <p><input type="submit" value="Добавить"></p>
+</form>
+
+{% endblock %}

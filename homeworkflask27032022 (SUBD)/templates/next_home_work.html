@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{{ super() }}
+<h2 class="catalog">Каталог наших автомобилей с описанием</h2>
+<div class="box1">
+{% for i in  base %}
+
+    <div class="box2">
+    <p class="marka">{{ i.marka }} {{ i.model }}</p>
+    <p class="year">{{ i.year }} ГОД</p>
+    <p class="price">{{ i.price }} руб</p>
+    <p>{{ i.id }}</p>
+
+     <form action="{{ url_for('info') }}" method="post">
+        <button type="submit" name="select_id" value='{{ i.id }}'>ОПИСАНИЕ</button>
+     </form>
+    </div>
+
+{% endfor %}
+</div>
+{% endblock %}

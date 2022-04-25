@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{{ super() }}
+
+<div class="box3">
+    <h1>ОПИСАНИЕ АВТОМОБИЛЯ</h1>
+    <h2>"{{ base.marka }} {{ base.model }}"</h2>
+    <p>{{ base.information }}</p>
+    </div>
+{% endblock %}

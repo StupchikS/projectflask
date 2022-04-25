@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{{ super() }}
+<p>Автомобили на которых ездили раньше</p>
+<ul>
+    {% for i in auto %}
+        <li>Прошлый автомобиль "{{ i. brend }}" принадлежал "{{ i.owner }}"</li>
+    {% endfor %}
+</ul>
+
+{% endblock %}

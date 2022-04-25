@@ -1,0 +1,39 @@
+body{
+    background: yellow;
+    margin: 0;
+    padding: 0;
+    font-family: Verdana;
+
+}
+.menu{
+    display: flex;
+    justify-content: space-around;
+    list-stile: none;
+    background: orange;
+    padding: 20px;
+    margin-top: 0;
+
+}
+
+.contect{
+    margin: 0 auto;
+    max-wight: 1200px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.flash{
+    padding: 10px;
+}
+.flash.success{
+    border: 1px solid #21DB56
+    background: green;
+}
+.flash.error{
+    border: 1px solid #21DB56
+    background: red;
+}
+.profile-ava{
+    width: 130px;
+    padding: 10px;
+}

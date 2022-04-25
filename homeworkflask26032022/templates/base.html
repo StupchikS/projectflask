@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ title }}</title>
+</head>
+<body>
+    {% block content %}
+    {% block mainmenu %}
+    <ul class="menu">
+        {% for i in menu %}
+        <li><a href="{{ i.url }}">{{ i.name }}</a></li>
+        {% endfor %}
+    </ul>
+    {% endblock mainmenu %}
+
+    {% endblock %}
+</body>
+</html>
